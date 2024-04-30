@@ -1,0 +1,1018 @@
+/* formato para todo el documento */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;}
+
+
+/* aqui dare formato al modal de bienvenida */
+
+#modalBienvenida{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	display: none;
+	z-index: 5;
+}
+
+#modaleBoxB {
+
+	width: 800px;
+	height: 500px;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+}
+#modaleBoxB>h1{
+	font-size: 3.5rem;
+	font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+ 	font-style: normal;
+ 	color: #911116;
+ 	-webkit-text-stroke: 1px white; /* borde texto */
+  margin-bottom: 70px;
+  margin-top: 55px;
+}
+#modaleBoxB> button{
+	font-family: "Rowdies", sans-serif;
+	font-size: 2rem;
+	padding: 20px 40px;
+	border-radius: 15px;
+	background-color: #911116;
+	color: white;
+}
+#modaleBoxB> button:hover{
+	background-color: black;
+	color: white;
+}
+
+
+/*INICIO SECCION HEADER */
+/* engloba toda la primera seccion */
+/* aqui empieza la zona del hero image */
+#encabezado {
+
+	height: 1080px;
+	width: 100%;
+	/*background-color: #7B7878;*/
+	overflow: hidden; /* permite que el background color se vea hasta arriba */
+	/*background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../MEDIA/FONDOS/hero image.jpg");*/
+	/*z-index: 2;*/
+	position: relative;
+	
+}
+#navbar{
+	/*z-index: 3;*/
+}
+
+.fondosHero {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	position:absolute;
+	top:0;
+	left:0;
+
+}
+
+#fondoHero1 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../MEDIA/FONDOS/Hero01.jpg");
+	z-index: 3;
+}
+#fondoHero2 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../MEDIA/FONDOS/Hero02.jpg");
+	z-index: 2;
+}
+#fondoHero3 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../MEDIA/FONDOS/Hero03.jpg");
+	z-index: 1;
+}
+
+.mainSlide {
+	animation-name:mainSlideAnim;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+.nextSlide {
+	animation-name:nextSlideAnim;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.hiddenSlide {
+	display: none;
+}
+
+body {
+	overflow-x:hidden;
+}
+
+
+@keyframes mainSlideAnim{
+	0%{margin-left: 0%;}
+	100%{margin-left: -100%;}
+}
+@keyframes nextSlideAnim{
+	0%{margin-left: 100%;}
+	100%{margin-left: 0%;}
+}
+
+#contenedorEncabezado {
+	
+	
+	/*background-color: orange;*/
+	height: 211px;
+	width: 100%;
+	display: flex; /* organiza los elementos */
+	justify-content: center; /* centra los elementos */
+	align-items: center;
+	margin-top: 260px;
+	overflow: hidden;
+}
+
+/* este contenedor contiene la imagen que acompaña al titulo del encabezado */
+.contendorEstrella {
+	z-index: 5;
+	height: 211px;
+	width: 200px;
+	/*background-color: #911116;*/
+	margin-left: 140px;
+	margin-right: 140px;
+	
+}
+.contendorEstrella img{
+	
+	width: 100%;
+	height: auto;
+
+}
+
+/* doy formato a la caja en la que aparece el titulo de la web */
+#tituloEncabezado {
+	z-index: 5;
+    display: flex; /* organiza el contenido */
+    flex-direction: column; /* puedo poner el h1 en columna */
+    align-items: center;
+    justify-content: center;
+    animation-name: titulo;
+		animation-duration: 3s;
+}
+/* doy estilo al texto */
+#tituloEncabezado h1 {
+
+
+
+ 	font-family: "Rowdies", sans-serif;
+  font-weight: 1000;
+ 	font-style: bold;
+ 	color: #911116;
+ 	-webkit-text-stroke: 6px black; /* borde de 6px */
+
+	font-size: 7rem;
+	text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8); /* sombra del texto */
+
+	line-height: 1; /*interliniado*/
+}
+
+@keyframes titulo{
+	0% {opacity: 0;}
+	75%% {opacity: 1;}
+	100% {opacity: 1;}
+}
+
+/* estilos del texto debajo del titulo */
+
+
+#subTituloEncabezado {
+z-index: 5;
+animation-name: subTitulo;
+animation-duration: 4s;
+
+	font-size: 3.7rem;
+	/*background-color: olive;*/
+	text-align: center;
+	color: white;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	position: relative;
+	top: 60px;
+
+ 	font-family: "Averia Sans Libre", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  -webkit-text-stroke: 2px black;
+
+}
+@keyframes subTitulo{
+	0% {opacity: 0; top: 100px;}
+	25%% {opacity: 0.3; top: 90px; }
+	75%% {opacity: 0.5; top: 70px; }
+	100% {opacity: 1; top: 60px; }
+}
+
+
+/* contenedor del menu encabezado fijo a la parte superior*/
+
+
+#contenedorMenu {
+  width: 100%;
+  height: 150px;
+  position: fixed; /* mantiene el menu fijo en la parte superior */
+  top: 0px;
+  font-size: 2.5rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 5; /* Asegura que el menú esté por encima de otros elementos */
+   
+  transition-property: top, height, width, font-size, line-height; /* Transición suave para la altura */
+  transition-duration: 0.7s;
+}
+
+
+/* contenedores quete dirigen a las secciones de la web */
+.cajaMenu {
+  width: 200px;
+  height: 150px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
+
+
+  font-family: "Rowdies", sans-serif;
+  	font-weight: 1000;
+ 	font-style: bold;
+ 	color: WHITE;
+ 	
+ 	text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8); /* da sombra al texto */
+
+	/*font-size: 2.5rem;*/
+}
+.cajaMenu p {
+	transition: color 0.3s, transform 0.3s;
+	
+}
+
+
+
+.cajaMenu p:hover {
+	color: #911116;
+	transform: scale(1.1)
+
+}
+
+#cajaMenu {
+	width: 300px;
+	height: 150px;
+	list-style: none;
+	position: absolute;
+	z-index: 1;
+}
+
+.cajaMenuGaleria {
+  width: 200px;
+  height: 150px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 1000;
+ 	font-style: bold;
+ 	
+ 	text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.8); /* da sombra al texto */
+	/*font-size: 2.5rem;*/
+	position: relative;
+  }
+
+.cajaMenuGaleria p{
+	color: white;
+	transition: color 0.3s, transform 0.3s;
+}
+.cajaMenuGaleria:hover #submenu {
+    display: block; /* Muestra el submenú cuando se pasa el ratón sobre el contenedor padre "GALERIA" */
+}
+
+.cajaMenuGaleria p:hover {
+	color: #911116;
+	transform: scale(1.1)
+}
+
+/* AQUI EMPIEZA EL SUBMENU */
+#submenu {
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background-color: rgba(0, 0, 0, 0.75); /* Cambia el color de fondo del submenú */
+    width: 200px; /* Establece el ancho del submenú */
+    padding-left: 10px; /* Añade espacio  alrededor del contenido del submenú */
+    display: none; /* Oculta el submenú por defecto */
+    list-style-type: none;
+}
+.elemSubmenu {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+
+}
+
+.elemSubmenu >a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.6rem;
+	font-family: "Rowdies", sans-serif;
+ 	font-weight: 1000;
+ 	font-style: bold;
+ 	color: WHITE;
+ 
+
+}
+.elemSubmenu a:hover {
+    color: #911116;
+  }
+
+
+
+/* contenedor del medio para el logo */
+#cajaImagen {
+  /*background-color: #f2f2f2;*/
+  background-size: cover; /* ajusta la imagen a toda la caja*/
+  background-position: center; /* centra la imagen */
+   
+  
+}
+#logo{
+	width: 150px;
+  height: 150px;
+  
+  transition-property: height, width;
+  transition-duration: 0.7s;
+}
+#cajaImagen:hover img{
+	transform: scale(1.1);
+}
+.enlace {
+  text-decoration: none; /* quita la decoracion del subrayado del enlace */
+}
+
+/* contenedor del titulo */
+
+/* FIN DEL HEADER */
+
+
+/* empieza seccion HISTORIA */
+#historia {
+
+	width: 100%;
+	height: 1057px;
+	background-color: #604849;
+	overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../MEDIA/FONDOS/fondo historia.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* estilos de los titulos de cada seccion */
+.titulo {
+
+	font-size: 6.25rem;
+	/*background-color: orange;*/
+	text-align: center;
+
+	margin-top: 130px;
+
+	font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+ 	font-style: normal;
+ 	color: #911116;
+ 	-webkit-text-stroke: 6px black; /* borde texto */
+
+	font-size: 6rem;
+}
+
+/* contenedor del video y del texto de la seccion historia */
+#contenedorHistoria {
+
+	width: 1400px;
+	height: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: forestgreen;*/
+	margin-top: 60px;
+	overflow: hidden;
+}
+/* contenedor del lado izquierdo, en el que hay el texto */
+.colHis {
+	width: 50%;
+	height: 550px;
+	/*background-color: blueviolet;*/
+	/*border-style: solid;*/
+	float: left;
+	
+}
+/* contenedor del video de HISTORIA */
+#videoHis {
+	width: 662px;
+	/*background-color: orangered;*/
+	height: 375px;
+	border-style: solid;
+	border-width: 6px;
+	
+
+}
+#videoHis iframe{
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+/* estilo del texto */
+.colHis >p {
+
+	font-size: 1.56rem;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-family: "Averia Sans Libre", sans-serif;
+  	font-weight: 700;
+  	font-style: bold;
+  	text-align: center;
+  	margin-top: 20px;
+  	color: white;
+  	-webkit-text-stroke: 1px black;
+  	line-height: 1.7;
+  	text-align: center;
+  	
+}
+/* FIN DE LA SECCION HISTORIA */
+
+
+/*INICIO SECCION GALERIA*/
+#galeria {
+
+	width: 100%;
+	height: 1200px;
+	/*background-color: #5F5446;*/
+	overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../MEDIA/FONDOS/fondo galeria.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
+/* contenedor de imagenes y menu de estilos de la seccion GALERIA */
+#contenedorGaleria {
+	width: 1300px;
+	height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: whitesmoke;*/
+	margin-top: 45px;
+	overflow: hidden;
+	justify-content: center;
+    align-items: center;
+}
+/* contenedor columna estilos */
+#colEstilos {
+
+	width: 20%;
+	height: 100%;
+	/*background-color: blueviolet;*/
+	/*border-style: solid;*/
+	float: left;
+	/*border-color:yellow;*/
+	justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2.5rem;
+  font-family: "Rowdies", sans-serif;
+ 	font-weight: 700;
+ 	font-style: bold;
+ 	color: #911116;
+ 	text-align: center;
+ 	-webkit-text-stroke: 4px black;
+    
+}
+/* margen entre cada estilo del menu ESTILOS */
+#colEstilos h4 {
+	transition-property: transform, color;
+	transition-duration: 0.3s;
+  margin-bottom: 75px; /* Separacion entre cada estilo */
+    
+}
+#colEstilos h4:hover {
+	color: white;
+	transform: scale(1.1)
+
+}
+.etiquetaPestanas {
+cursor: pointer;
+}
+
+
+
+#colEstilos a {
+color: #911116;
+-webkit-text-stroke: 4px black;
+
+}
+
+.contenedorFotos {
+	width: 80%;
+	height: 100%;
+	/*background-color: blueviolet;*/
+	/*border-style: solid;*/
+	/*float: left;*/
+	/*border-color:yellow;*/
+	overflow: hidden;
+}
+/* contenedor de cada imagen y texto */
+.tattoo{
+	width: calc(33.33% - 40px);
+	height: calc(50% - 40px);
+	/*background-color: rosybrown;*/
+	float: left;
+	/*border-style: solid;*/
+	margin-right: 14px;
+	margin-left: 14px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+
+}
+/* contenedor de imagen*/
+.imagenTattoo {
+	/*295x276*/
+	width: 100%;
+	height: 80%;
+	background-color: lightgrey;
+	border-style: solid;
+	border-width: 6px;
+	overflow: hidden;
+
+
+}
+/* contenedor para introducir la descripcion de cada imagen */
+.descTattoo {
+
+	text-align: center;
+	color: white;
+	margin-top: 20px;
+	font-family: "Averia Sans Libre", sans-serif;
+ 	font-weight: 400;
+  	font-style: normal;
+}
+
+@keyframes animTattoo {
+	from { transform: scale(0.50,0.50); };
+	to { transform: scale(1,1); };
+}
+
+.tattooAnimado {
+	animation-name: animTattoo;
+	animation-duration: 1s;
+}
+
+.imagenTattoo img{
+	width: 100%;
+	height: 100%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+}
+.imagenTattoo img:hover{
+	transform: scale(1.2,1.2);
+}
+.pestanaActiva{
+	
+	color: white;
+	transform: scale(1.1)
+}
+/* FIN DE LA SECCION GALERIA */
+/*INICIO SECCION DISEÑOS*/
+#diseños {
+	width: 100%;
+	height: 1200px;
+	/*background-color: whitesmoke;*/
+	overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../MEDIA/FONDOS/fondo diseños.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#contenedorDis {
+  width: 1300px;
+  height: 800px;
+  margin: 0 auto;
+  /*background-color: orangered;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+/* resolucion 16:9 */
+.imgDis {
+  width: calc(30% - 20px); 
+  height: calc(25% - 10px); 
+  background-color: white; 
+  border-radius: 10px; /* redondear bordes */
+  margin: 15px; 
+  
+}
+.imgDis:hover {
+	box-shadow: 1px -2px 8px 5px #911116;
+	cursor: pointer;
+}
+
+/* formato al LIGHTBOX */
+#modalLightboxDis{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	display: none;
+	top: 0;
+	z-index: 5;
+}
+
+#imageToShow {
+	width: 80vw;
+	height: auto;
+	/*background-color: whitesmoke;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/*padding: 50px;*/
+	text-align: center;
+	
+}
+.imageLightbox {
+	width: 100%;
+	height: auto;
+	border-radius: 50px;
+
+}
+
+.lbButtons {
+
+	width: 125px;
+	height: 125px;
+	border-radius: 20%;
+	position: absolute;
+	top: 50%;
+
+	transform: translateY(-50%);
+	background-color: black;
+	border-style: solid;
+	border-width: 6px;
+	border-color: #911116;
+}
+
+.lbButtons:hover{
+	border-color: whitesmoke;
+
+
+}
+.lbbRight{
+	right: 30px;
+}
+.lbbLeft{
+	left: 30px;
+}
+
+.lbButtons i {
+	 font-size: 4rem;
+	 color: #911116;
+}
+
+.lbButtons:hover i {	 
+	 color: whitesmoke;
+}
+
+
+
+/*FIN SECCION DISEÑOS*/
+/*INICIO DE LA SECCION ARTISTAS */
+
+
+/* contenedor de seccion */
+#artistas {
+	
+	width: 100%;
+	height: 1100px;
+	background-color: #666464;
+	overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../MEDIA/FONDOS/fondo artistas.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*contenedor de los elementos de la seccion */
+#contenedorArtistas {
+
+	margin-top: 20px;
+	width: 1200px;
+	height: 790px;
+	/*background-color: orangered;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*contenedor para cada artista, incluye la imagen y la descripcion */
+
+.cuadradoArtistas {
+
+	width: calc(62% - 20px);
+	height: 380px;
+	/*background-color: rosybrown;*/
+	float: left;
+	/*border-style: solid;*/
+	margin-right: 10px;
+	margin-left: 10px;
+	/*margin-top: 10px;
+	margin-bottom: 10px;*/
+}
+
+/* contenedor para la imagen de cada artista */
+.cuadradoFotos {
+	/*436x380*/
+	width: calc(38% - 20px);
+	height: 380px;
+	background-color: lightgrey;
+	float: left;
+	border-style: solid;
+	margin-right: 10px;
+	margin-left: 10px;
+	/*margin-top: 10px;
+	margin-bottom: 10px;*/
+	align-items: center;
+	border-width: 6px;
+	background-size: cover;
+	overflow: hidden;
+}
+/* contenedor de la descripcion de cada artista */
+.descArtistas {
+
+	text-align: center;
+	color: white;
+	margin-top: 50px;
+	font-size: 1.56rem;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-family: "Averia Sans Libre", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  	-webkit-text-stroke: 1px black;
+}
+
+/* FIN SECCION ARTISTAS */
+
+
+
+/* EMPIEZA LA SECCION CONTACTO */
+#contacto {
+
+	width: 100%;
+	height: 850px;
+	background-color: #837F71;
+	overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../MEDIA/FONDOS/fondo contacto.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#contenedorContacto {
+
+	width: 1400px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: whitesmoke;*/
+	margin-top: 25px;
+	overflow: hidden;
+}
+
+/* estilo del mapa */
+#mapaContacto {
+	
+	float:left;
+	border: 6px solid #000; /* borde del mapa color negro*/
+
+	
+
+}
+/* formulario de la seccion contacto */
+#formu {
+
+	
+	font-size: 1.5rem;
+	float: left;
+	padding-top: 40px;
+	padding-left: 65px;
+	font-family: "Averia Sans Libre", sans-serif;
+ 	font-weight: 400;
+  	font-style: normal;
+  	color: white;
+}
+
+/* estilos de cada contenedor del formulario */
+input {
+	width: 400px;
+	height: 60px;
+	display: block;
+	
+	margin-top: 30px;
+	border: 6px solid #000; /* borde color negro */
+	 font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0
+  	font-size: 1.3rem;
+  	text-align: center;
+  	border-width: 6 px; /* grosor borde */
+}
+
+#modalFormulario{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	display: none;
+	z-index: 5;
+	top: 0px;
+}
+
+#modaleBoxF {
+	width: 800px;
+	height: 325px;
+	background-color: whitesmoke;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+}
+#modaleBoxF>h1{
+	font-size: 1.8rem;
+	font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  margin-bottom: 20px;
+  
+}
+
+#modaleBoxF>p{
+	font-size: 1.5rem;
+	text-align: center;
+	font-family: "Rowdies", sans-serif;
+	font-weight: 700;
+  font-style: bold;
+  margin-bottom: 30px;
+
+}
+
+#modaleBoxF> button{
+	font-family: "Rowdies", sans-serif;
+	font-size: 1.5rem;
+	padding: 15px 30px;
+	border-radius: 10px;
+	background-color: #911116;
+
+	color: white;
+}
+#modaleBoxF> button:hover{
+	background-color: black;
+	color: white;
+}
+
+
+#botonEnviar {
+	transition: transform 0.3s;
+	height: 40px;
+	width: 150px;
+	border-style: none;
+	background-color: whitesmoke;
+	font-size: 1.5rem;
+	text-align: center;
+	border-style: solid;
+	border-width: 6px;
+	
+	margin-left: 30px;
+	
+}
+#botonEnviar:hover {
+	transform: scale(1.2);
+	color: white;
+	
+	background-color: black;
+}
+/*FIN DE LA SECCION CONTACTO */
+
+
+/* INICIO DEL FOOTER */
+#pie {
+	height: 100px;
+	widht: 100%;
+	background-color: lightgrey;
+	overflow: hidden;
+
+}
+/* contenedor por si hace falta un texto en el footer */
+.textoFooter {
+	height: 80px;
+	width: 1300px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	margin-right: 78px;
+	/*background-color: whitesmoke;*/
+	float: left;
+	text-align: center;
+	font-family: "Averia Sans Libre", sans-serif;
+ 	font-weight: 500;
+  	font-style: normal;
+  	font-size: 1.25rem;
+  	color: black;
+  	display: flex; /* Usar flexbox */
+    justify-content: center; /* Alinear horizontalmente */
+  	-webkit-text-stroke: 0.5px black;
+  	line-height: 2;
+}
+
+/* contenedor para los elementos de enlace de RSS */
+.contenedorRss {
+	
+	height: 80px;
+	width: 360px;
+	/*background-color: whitesmoke;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 105px;
+	
+	display: flex;
+  justify-content: space-between;
+
+
+}
+.contenedorRss1:hover {
+	transform: scale(1.2);
+}
+.contenedorRss2:hover {
+	transform: scale(1.2);
+}
+.contenedorRss3:hover {
+	transform: scale(1.2);
+}
+
+/* contenedor VIOLETA(instagram) para RSS */
+.contenedorRss1 {
+	transition: transform 0.3s;
+	border: 1px solid #000
+	height: 80px;
+	width: 80px;
+	/*background-color: violet;*/
+
+}
+
+/* contenedor ROJO (YT) para RSS */
+.contenedorRss2{
+	transition: transform 0.3s;
+	border: 1px solid #000
+	height: 80px;
+	width: 80px;
+	/*background-color: red;*/
+}
+/* contenedor VERDE (Whatsapp) para RSS */
+.contenedorRss3 {
+	transition: transform 0.3s;
+	border: 1px solid #000
+	height: 80px;
+	width: 80px;
+	/*background-color: green;*/
+}
+
+/*FIN DEL FOOTER*/
+/*FIN DEL CSS */
+
+

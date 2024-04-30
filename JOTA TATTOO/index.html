@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JOTA TATTOO</title>
+	<link rel="stylesheet" href="CSS/Style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="JS/Scripts.js"></script>
+
+	<!-- Fuentes -->
+	<!--  Rowdies -->
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&family=Inter:wght@800&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+	
+	<!--  Averia Sans Libre -->
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&family=Inter:wght@800&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+
+	<!--  Inter -->
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&family=Inter:wght@800&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+
+
+	<!--  iconos de font awesome -->
+	<script src="https://kit.fontawesome.com/51320b7275.js" crossorigin="anonymous"></script>
+
+	<!-- precarga de imagenes -->
+	<link rel="preload" as="image" href="MEDIA/FONDOS/hero01.jpg">
+	<link rel="preload" as="image" href="MEDIA/FONDOS/hero02.jpg">
+	<link rel="preload" as="image" href="MEDIA/FONDOS/hero03.jpg">
+
+	<!-- aos animation library -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+
+	<!-- Aqui empieza el modal de bienvenida -->
+
+	<div id="modalBienvenida">
+		<div id="modaleBoxB">
+			<h1>Bienvenido a Jota Tattoo</h1>
+			<button onclick="cerrarMBB()">Empieza</button>
+
+		</div>
+	</div>
+	
+	<header id="encabezado">
+
+		<div class="fondosHero" id="fondoHero1"></div>
+		<div class="fondosHero" id="fondoHero2"></div>
+		<div class="fondosHero" id="fondoHero3"></div>
+
+	<!-- contenedor del titulo y las imagenes de estrella-->
+		<div id="contenedorEncabezado">
+    		<div class="contendorEstrella" data-aos="zoom-in" data-aos-duration="3000">
+    			<img src="MEDIA/LOGO/ESTRELLA LOGO.png" class="">
+    		</div>
+    		<div id="tituloEncabezado">
+       			<h1>JOTA</h1>
+        		<h1>TATTOO</h1>
+    		</div>
+    		<div class="contendorEstrella" data-aos="zoom-in" data-aos-duration="3000">
+    		<img src="MEDIA/LOGO/ESTRELLA LOGO.png">
+    		</div>
+		</div>
+		<h3 id="subTituloEncabezado">Desde 2004 llevamos el arte del tatuaje a más de 1.000 personas</h3>
+
+		<!-- Aquí empieza el menu horizonatal -->
+
+	<!--<nav id="navbar"> -->
+	<div id="contenedorMenu" class="hidden">
+		<!-- seccion historia con link a historia -->
+    	<a href="#historia" class="enlace">
+      		<div class="cajaMenu">
+        		<p>HISTORIA</p>
+      		</div>
+    	</a>
+    	<!-- seccion galeria con link a galeria -->
+    	<a href="#galeria" class="enlace">
+      		<div class="cajaMenuGaleria">
+        		<p>GALERIA</p>
+        		<ul id="submenu">
+        			<li class="elemSubmenu"><a href="#galeria" onclick="marcarPestana('contenedorAnime','tabAnime')">ANIME</a></li>
+        			<li class="elemSubmenu"><a href="#galeria" onclick="marcarPestana('contenedorJapo','tabJapo')">JAPONES</a></li>
+        			<li class="elemSubmenu"><a href="#galeria" onclick="marcarPestana('contenedorOldS','tabOldS')">OLD SCHOOL</a></li>
+        			<li class="elemSubmenu"><a href="#galeria" onclick="marcarPestana('contenedorRealismo','tabRealismo')">REALISMO</a></li> 
+
+        		</ul>
+      		</div> 
+      	</a>
+
+      		<!-- logo con link al header -->
+      	<a href="#encabezado" class="enlace">
+      		<div id="cajaImagen">
+       			<img id="logo" src="MEDIA/LOGO/LOGO.png" alt="LOGO">
+      		</div>
+    	</a>
+    	<!-- seccion artistas con link a artistas -->
+    	<a href="#artistas" class="enlace">
+    		<div class="cajaMenu">
+    			<p>ARTISTAS</p>
+      		</div>
+    	</a>
+   
+    	<!-- seccion contacto con link a contacto -->
+    	<a href="#contacto" class="enlace">
+      		<div class="cajaMenu">
+        		<p>CONTACTO</p>
+      		</div>
+    	</a>
+  	</div>
+  	<!--</nav> -->
+		
+		<!--</nav>-->
+		</header>
+
+
+	<section id="historia">
+		<!-- Título de la sección -->
+		<h2 class="titulo" data-aos="fade-up">HISTORIA</h2>
+		
+		<div id="contenedorHistoria" data-aos="fade-up">
+			<!-- Columna izquierda de la historia -->
+			<div class="colHis">
+				<p>
+					Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non."
+				</p>
+			</div>
+			<!-- Columna derecha de la historia para el video -->
+			<div class="colHis">
+				<!-- Espacio para insertar un video -->
+				<div id="videoHis">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Fvnk6FDa7xg?si=ST-dcVdXKKzaJkRC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section id="galeria">
+		<!-- Título de la sección -->
+		<h2 class="titulo" data-aos="fade-up">GALERIA</h2>
+
+		<!-- Contenedor de la galería -->
+		<div id="contenedorGaleria">
+			
+		
+			<div id="colEstilos">
+
+				<div>
+					<!-- Columna de estilos -->
+					<!--<a href="#galeria" class="enlace">
+					<h4> ESTILOS</h4></a>--> <!-- titulo -->
+					<h4 id="tabAnime" class="etiquetaPestanas pestanaActiva" onclick="marcarPestana('contenedorAnime','tabAnime')">ANIME</h4><!-- estilo1 -->
+					<h4 id="tabJapo"class="etiquetaPestanas" onclick="marcarPestana('contenedorJapo','tabJapo')">JAPONES</h4><!-- estilo2 -->
+					<h4 id="tabOldS"class="etiquetaPestanas" onclick="marcarPestana('contenedorOldS','tabOldS')">OLD SCHOOL</h4><!-- estilo3 -->
+					<h4 id="tabRealismo"class="etiquetaPestanas" onclick="marcarPestana('contenedorRealismo','tabRealismo')">REALISMO</h4><!-- estilo4 -->
+				 </div>
+			
+			</div>
+			<!-- Contenedor de fotos de la galería -->
+			<!-- AQUI EMPIEZA EL ESTILO DE TATUAJES DE ANIME -->
+
+			
+
+			<div class="contenedorFotos" id="contenedorAnime">
+				<!-- Sección de fotos -->
+				<div class="tattoo">	
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/ANIME/ANIME1.jpg">
+							</div><!-- imagen tattoo -->
+							<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+							
+							</div>
+				
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/ANIME/ANIME2.jpg">
+						</div><!-- imagen tattoo -->
+							<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+						</div>
+					
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/ANIME/ANIME3.jpg">
+						</div><!-- imagen tattoo -->
+							<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+						</div>
+					
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/ANIME/ANIME4.jpg">
+						</div><!-- imagen tattoo -->
+							<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+						
+						</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/ANIME/ANIME5.jpg">
+						</div><!-- imagen tattoo -->
+							<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+						</div>
+					
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/ANIME/ANIME6.jpg">
+						</div><!-- imagen tattoo -->
+							<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+						</div>
+					
+			</div>
+			<!-- EMPIEZA EL ESTILO DE TATUJES JAPONES -->
+			<div class="contenedorFotos" id="contenedorJapo">
+				<!-- Sección de fotos -->
+				<div class="tattoo">	
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/JAPO/JAPO1.jpeg">
+					</div><!-- imagen tattoo -->
+					
+						<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				
+				
+				
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/JAPO/JAPO2.jpeg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/JAPO/JAPO3.jpeg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/JAPO/JAPO4.jpeg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/JAPO/JAPO5.jpeg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/JAPO/JAPO6.jpeg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				
+			</div>
+
+			<!-- EMPIEZA EL ESTILO DE TATUJES OLD SCHOOL -->
+			<div class="contenedorFotos" id="contenedorOldS">
+				<!-- Sección de fotos -->
+				<div class="tattoo">	
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/OLD SCHOOL/OLDSCHOOL1.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/OLD SCHOOL/OLDSCHOOL2.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/OLD SCHOOL/OLDSCHOOL3.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/OLD SCHOOL/OLDSCHOOL4.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/OLD SCHOOL/OLDSCHOOL5.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/OLD SCHOOL/OLDSCHOOL6.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+			</div>
+
+			<!-- EMPIEZA EL ESTILO DE TATUJES REALISMO -->
+			<div class="contenedorFotos" id="contenedorRealismo">
+				<!-- Sección de fotos -->
+				<div class="tattoo">	
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/REALISMO/REALISMO1.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/REALISMO/REALISMO2.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/REALISMO/REALISMO3.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/REALISMO/REALISMO4.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/REALISMO/REALISMO5.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+					</div>
+				<div class="tattoo">
+					<div class="imagenTattoo">
+						<img src="MEDIA/GALERIA/REALISMO/REALISMO6.jpg">
+					</div><!-- imagen tattoo -->
+					<p class="descTattoo">DESCRIPCION TATTOO</p><!-- desc del tattoo -->
+				</div>
+			</div>
+		
+
+		
+		
+	</section>
+
+	<section id="diseños">
+		<!-- Título de la sección -->
+		<h2 class="titulo" data-aos="fade-up" >DISEÑOS</h2>
+
+		<!-- Contenedor de diseños -->
+		<div id="contenedorDis">
+			<img class="imgDis" src="MEDIA/DIS/DIS12.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS11.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS10.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS9.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS8.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS7.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS6.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS5.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS4.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS3.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS2.jpg" alt="" data-aos="flip-up"></img>
+  			<img class="imgDis" src="MEDIA/DIS/DIS1.jpg" alt="" data-aos="flip-up"></img>
+  			
+
+		</div>
+		<div id="modalLightboxDis">
+			<div id="imageToShow">
+			
+
+			</div>
+			<button class="lbButtons lbbRight" onclick="nextImgGal()">
+				<i class="fa-solid fa-angle-right"></i>
+
+			</button>
+			<button class="lbButtons lbbLeft" onclick="prevImgGal()">
+				<i class="fa-solid fa-angle-left"></i>
+			</button>
+		</div>
+	</section>
+
+
+
+	<section id="artistas" >
+
+		<!-- Título de la sección -->
+		<h2 class="titulo" data-aos="fade-up">ARTISTAS</h2> 
+
+		 <!-- Contenedor de artistas -->
+		<div id="contenedorArtistas" >
+
+			<!-- Cuadrado para la foto del primer artista -->
+			<div class="cuadradoFotos" data-aos="fade-right" data-aos-duration="2000">
+				<img src="MEDIA/ARTISTAS/ART1.jpg">
+
+			</div>
+			<!-- Contenedor para desc del primer artista -->
+			<div class="cuadradoArtistas">
+					<p class="descArtistas">Descripcion del artista 1, aparece en la parte superior derecha. Hacere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non.
+					<p>
+
+			</div>
+			<!-- Contenedor para desc del segundo artista -->
+			<div class="cuadradoArtistas" >
+					<p class="descArtistas">Descripcion del artista 2, aparece en la parte inferior izquierda. Aacere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non.
+						<p>
+
+			</div>
+			<!-- Contenedor para imagen segundo artista -->
+			<div class="cuadradoFotos" data-aos="fade-left" data-aos-duration="2000">
+				<img src="MEDIA/ARTISTAS/ART2.jpg">
+				
+
+			</div>
+		</div>
+		
+	</section>
+
+
+
+
+	<section id="contacto" >
+		
+		<h2 class="titulo" data-aos="fade-up">CONTACTO</h2>
+
+		<div id="contenedorContacto">
+			
+			<!-- Mapa de Google Maps -->
+				<div id="mapaContacto"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11965.439403633116!2d2.1594092041503896!3d41.43141288582369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bd465e26af4f%3A0x25942edccd3e07be!2sGimnasio%20Horta%20Deportiva!5e0!3m2!1ses!2ses!4v1709913035250!5m2!1ses!2ses" width="670" height="460" style="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+				<!-- Formulario de contacto -->
+				<form action="" id="formu">
+
+					<p>Contacta con nosotros:</p>
+					
+					<!-- Campo para el nombre -->
+					<input id="formNombre" formenctype="text" name="Nombre" placeholder="Nombre y Apellidos" required data-aos="fade-zoom-in"
+     				data-aos-easing="ease-in-back"
+     				data-aos-delay="200"
+     				data-aos-offset="0">
+					<!-- Campo para el email -->
+					<input id="formCorreo" formenctype="email" name="correo" placeholder="Escribe tu email" required data-aos="fade-zoom-in"
+     				data-aos-easing="ease-in-back"
+     				data-aos-delay="300"
+     				data-aos-offset="0">
+					<!-- Campo para pregunta -->
+					<input id="formPregunta"formenctype="text" name="pregunta" placeholder="Escribe tu pregunta" required data-aos="fade-zoom-in"
+     				data-aos-easing="ease-in-back"
+     				data-aos-delay="400"
+     				data-aos-offset="0">
+					<!-- boton "enviar" -->
+					<input type="button" id="botonEnviar" onclick="modalFormulario()" value="Enviar">
+
+				</form>
+				
+		</div>
+
+	<div id="modalFormulario">
+		<div id="modaleBoxF">
+			<h1>Hemos recibido tu información</h1>
+			<p id="mensajeFormulario">En breve Jota Tattoo se pondrá en contacto contigo a través del email que nos has facilitado.</p>
+			<button onclick="cerrarMBR()">Empieza</button>
+
+		</div>
+	</div>
+
+
+
+	</section>
+
+	<footer id="pie">
+		<!-- Contenedor de texto del footer -->
+		<div class="textoFooter">
+			<p> caja de texto para footer </p>
+		</div>
+		<!-- Contenedor de enlaces a redes sociales -->
+		<div class="contenedorRss">
+
+			<!-- Enlace a Instagram -->
+			<div class="contenedorRss1"><a href="https://www.instagram.com/" target="_blank">
+				<img src="MEDIA/RRSS/instagram.svg" alt="INSTAGRAM" width="80px" height="80px">
+
+				</a>
+			</div>
+
+			<!-- Enlace a YouTube -->
+			<div class="contenedorRss2"><a href="https://www.youtube.com/" target="_blank">
+				<img src="MEDIA/RRSS/youtube.svg" alt="YOUTUBE" width="80px" height="80px">
+
+				</a>
+			</div>
+
+			<!-- Enlace a WhatsApp -->
+			<div class="contenedorRss3"><a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+				<img src="MEDIA/RRSS/whatsapp.svg" alt="WHATSAPP" width="80px" height="80px">
+				
+				</a>
+
+			</div>
+			
+
+		</div>
+
+	</footer>
+
+<script>
+	//modalBienvenida();
+	setInterval(slideshowAnim, 3000);
+	
+	//setInterval(heroSlideshow, 3000);
+	readyLightbox();
+</script>
+
+<script>
+  AOS.init();
+</script>
+
+
+
+</body>
+</html>
+
